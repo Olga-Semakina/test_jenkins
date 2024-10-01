@@ -1,5 +1,13 @@
 freeStyleJob('test-job') {
     steps {
-        shell('echo START')  
+        triggers {
+            cron("H/10 * * * *")
+        }
+        shell('''cd $JENKINS_HOME/git_repo_refs
+for d in */; do
+    cd $d
+    git fetch
+    cd ..
+done''')
     }
 }

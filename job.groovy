@@ -1,4 +1,9 @@
 freeStyleJob('test-reference-update-job') {
+    wrappers {
+        secretBuildWrapper {
+            git
+        }
+    }
     steps {
         triggers {
             cron("H/10 * * * *")

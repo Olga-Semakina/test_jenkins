@@ -1,4 +1,4 @@
-freeStyleJob('test-job') {
+freeStyleJob('test-reference-update-job') {
     steps {
         triggers {
             cron("H/10 * * * *")

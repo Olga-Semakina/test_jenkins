@@ -7,6 +7,7 @@ freeStyleJob('test-job') {
 for d in */; do
     cd $d
     git fetch
+    echo tmp log
     cd ..
 done''')
     }

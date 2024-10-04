@@ -1,7 +1,10 @@
 freeStyleJob('test-reference-update-job') {
     wrappers {
-        secretBuildWrapper {
-            git
+        credentialsBinding {
+            gitUsernamePassword {
+                gitToolName('default')
+                credentialsId('git')
+            }
         }
     }
     steps {

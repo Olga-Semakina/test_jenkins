@@ -1,0 +1,3 @@
+[submodule "python-course"]
+	path = python-course
+	url = https://github.com/Olga-Semakina/python-course
